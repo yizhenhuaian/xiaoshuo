@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lbt{
+            width: 750px;
+            height: 252px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .lbt img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .lbt_btn_div{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .lbt_btn{
+            width: 20%;
+
+            height: 35px;
+            background-color: rgba(172, 172, 172, 0.4);
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            float: left;
+            color: white;
+            font-size: 14px;
+        }
+
+        .lbt_btn_hover,.lbt_btn:hover{
+            background-color: rgb(255, 69, 100);
+        }
+    </style>
+</head>
+<body>
+    <div class="lbt">
+        <img id="lbt_img" src="image/img1.jpg">
+        <div class="lbt_btn_div">
+            <button id="lbt_btn_1" class="lbt_btn">农家小福妻有法术</button>
+            <button id="lbt_btn_2" class="lbt_btn">和顶流结婚后上了</button>
+            <button id="lbt_btn_3" class="lbt_btn">重生九零甜心崽</button>
+            <button id="lbt_btn_4" class="lbt_btn">诱他上瘾</button>
+            <button id="lbt_btn_5" class="lbt_btn">顶级美人次级替</button>
+        </div>
+    </div>
+</body>
+<script>
+    //定义页面初始轮播图游标位置
+    var lbt_index = 1;
+    //轮播图最大数
+    var lbt_max_index = 5;
+    //轮播事件对象
+    var lbt_id = null;
+
+    //页面打开后先运行一次
+    lbt();
+    function lbt(){
+        //获取轮播图img元素
+        var obj = document.getElementById('lbt_img');
+        obj.src = 'image/img'+lbt_index+'.jpg';
+
+        //改变轮播图按钮样式
+        for (var i=1;i<=lbt_max_index;i++){
+            if(i==lbt_index){
+                //将当前对应的button的class追加样式名称lbt_btn_hover
+                document.getElementById('lbt_btn_'+i).classList.add('lbt_btn_hover');
+            }
+            else{
+                //将其他button的class去除样式名称lbt_btn_hover
+                document.getElementById('lbt_btn_'+i).classList.remove('lbt_btn_hover');
+            }
+        }
+
+        lbt_index++;
+        if(lbt_index>lbt_max_index){
+            //如果++后大于1则将游标移动会最初的位置
+            lbt_index = 1;
+        }
+    }
+
+    lbt_id = setInterval(lbt,2000);
+
+    var lbv = document.getElementsByClassName('lbt_btn');
+    for(var i=0;i<lbv.length;i++){
+        lbv[i].onmouseover = function(){
+            //背景色变
+            lbt_index = this.id.split('_').pop();
+            for (var i=1;i<=lbt_max_index;i++){
+                if(i==lbt_index){
+                    //将当前对应的button的class追加样式名称lbt_btn_hover
+                    document.getElementById('lbt_btn_'+i).classList.add('lbt_btn_hover');
+                }
+                else{
+                    //将其他button的class去除样式名称lbt_btn_hover
+                    document.getElementById('lbt_btn_'+i).classList.remove('lbt_btn_hover');
+                }
+            }
+            //变更图片
+            var obj = document.getElementById('lbt_img');
+            obj.src = 'image/img'+lbt_index+'.jpg';
+
+            //销毁轮询事件
+            clearInterval(lbt_id);
+        }
+        lbv[i].onmouseout = function(){
+            lbt_id = setInterval(lbt,2000);
+        }
+    }
+</script>
+</html>

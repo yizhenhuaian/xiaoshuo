@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小说阅读网站</title>
+  <link rel="stylesheet" href="icon/iconfont.css">
+
+  <style type="text/less">
+    body{
+      background-color: rgb(245, 245, 245);
+      margin: 0;
+    }
+    a{
+      text-decoration: none;  /*去除默认的下划线*/
+      outline: none;  /*去除点击后的外虚线框*/
+      color: black;  /*去除默认的颜色和点击后变化的颜色*/
+    }
+
+    
+    .dd{
+      width: 100%;
+      height: 135px;
+      background-color: rgb(255, 255, 255);
+
+      #dd_{
+        width: 1020px;
+        margin: auto;
+        hr{
+          margin: 1px;
+        }
+        .top1{
+          background-color: white;
+          display: flex;
+          height: 85px;
+            span{
+              color: red;
+              font-size: 26px;
+              /* margin-right: 10px; */
+            }
+            .logo{
+              a{
+                  img{
+                    width: 182px;
+                    height: 40px;
+                    vertical-align: top;
+                    margin: 20px 0;
+                  }
+              }
+            }
+            #input{
+              position: relative;
+              input{
+                border: 2px solid red;
+                border-radius: 100px;
+                width: 280px;
+                height: 38px;
+                font-size: 14px;
+                padding: 0 20px;
+                margin: 20px 0 0 210px;
+                vertical-align: top;
+                background-color: white;
+              }
+              span{
+                color: red;
+                font-size: 26px;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: -10px;
+                top: 20px;
+                padding: 10px 5px;
+              }
+            }
+            #shujia{
+              margin: 30px 0;
+              margin-left: 50px;
+              width: 170px;
+              text-align: center;
+              vertical-align: middle;
+
+              span{
+                font-weight: 600;
+                margin-right: 10px;
+              }
+              
+            }
+            #news{
+              width: 30px;
+              line-height: 90px;
+              text-align: center;
+              font-weight: 800;
+            }
+            #Personal{
+              margin: 25px 0;
+              margin-left: 40px;
+              height: 100%;
+              img{
+                width: 35px;
+                height: 35px;
+              }
+            }
+        }
+        .top2{
+          height: 45px;
+          display: flex;
+          
+          .type_list{
+            width: 800px;
+            height: 100%;
+            ul{
+              list-style: none;
+              display: flex;
+              height: 44px;
+              margin: 0;
+              padding: 0;
+              
+              li{
+                background-color: white;
+                font-size: 14px;
+                margin: 10px 15px;
+                white-space:nowrap;
+
+                a:hover{
+                  /* text-decoration: underline; */
+                  border-bottom: 2px solid red;
+                }
+
+                span{
+                  color: red;
+                  font-size: 16px;
+                  text-align: center;
+                  margin-right: 10px;
+                  font-weight: 800;
+                  }
+              }
+              li:first-child{
+                margin-left: 0;
+              }
+            }
+          }
+          .zuojia{
+            padding: 10px 0;
+            white-space:nowrap;
+            span{
+              color: red;
+              font-size: 30px;
+              vertical-align: middle;
+              margin-right: 3px;
+              font-weight: 600;
+            }
+            #zuanshi{
+              font-size: 22px;
+            }
+            #chongzhi{
+              font-size: 30px;
+            }
+            a:last-of-type{
+              margin-left: 40px;
+            }
+            a:first-of-type{
+              margin-left: 25px;
+            }
+          }
+        }
+      }
+      a{
+        color: gray;
+      }
+    }
+    .lb1{
+      width: 1020px;
+      height: 290px;
+      margin: 20px auto;
+      position: relative;
+      background-color: white;
+      display: flex;
+      .img_div{
+        width: 730px;
+        height: 210px;
+        padding: 20px;
+        position: relative;
+
+        #lb_imgs{
+          width: 100%;
+          height: 100%;
+
+          img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            visibility: hidden;
+          }
+        }
+        #lb_btns{
+          width: 100%;
+          height: 35px;
+          margin: 0;
+          position: absolute;
+          z-index: 20;
+          bottom: -15px;
+        
+            button{
+              width: calc(20% - 0.8px);
+              height: 40px;
+              background-color: rgb(172, 172, 172, 0.4);
+              border: none;
+              text-align: center;
+              text-decoration: none;
+              float: left;
+              margin: 0 0.4px;
+              color: white;
+              font-size: 14px;
+              a{
+                color: white;
+              }
+            }
+        }
+      }
+      .lb_bt_bgc, button:hover{
+        background-color: rgb(255, 69, 100)!important;
+      }
+      .ggao{
+        width: 230px;
+        height: 100%;
+        margin: 20px 0 0 20px;
+        padding: 0 20px;
+        #title{
+          span{
+            font-size: 30px;
+          }
+        }
+        b{
+          font-size: 18px;
+          font-weight: 400;
+        }
+        ul{
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+          li{
+            height: 25px;
+            list-style: none;
+            text-align: left;
+            vertical-align: middle;
+            a{
+              color: gray;
+            }
+          }
+          a:hover{
+            color: red;
+          }
+        }
+        
+        hr{
+          margin: 5px;
+          color: rgba(234, 228, 228, 0.973);
+        }
+        hr:first-child{
+          border: 3px solid;
+        }
+      }
+
+    }
+    .bjqt{
+      padding: 10px;
+      border: 2px;
+      box-sizing: border-box;
+      height: 490px;
+      width: 1020px;
+      margin: auto;
+      background-color: white;
+      display: flex;
+      b{
+        font-size: 20px;
+      }
+      .left{
+        padding: 10px;
+        width: 75%;
+        overflow: hidden;
+        display: flow-root;
+        position: relative;
+        hr{
+          margin: 5px 0;
+        }
+        .line{
+          width: 100%;
+          height: 1px;
+          background-color: rgb(173, 173, 173);
+          position: absolute;
+        }
+        #line1{
+          top: 191px;
+        }
+        #line2{
+          top: 335px;
+        }
+        ul{
+          margin: 0;
+          padding: 0;
+          li{
+            list-style: none;
+            width: 33.33%;
+            padding: 20px 0;
+            float: left;
+            margin: 0;
+            .book{
+              .bookimg{
+                width: 72px;
+                height: 103px;
+                margin-right: 5px;
+                float: left;
+              }
+              .bookname{
+                width: 150px;
+                height: 23px;
+                margin-left: 8px;
+                flex-wrap: nowrap;
+                vertical-align: top;
+                overflow: hidden;
+                float: left;
+                }
+                a:hover {
+                  color: red;
+                } 
+                p{
+                  font-size: 10px;
+                  height: 30px;
+                  width: 150px;
+                  overflow: hidden;
+                  margin-left: 8px;
+                  margin-bottom: 20px;
+                  /* padding: 0 5px; */
+                  /* left: 72px;
+                  top: 0; */
+                  float: left;
+                }
+                div{
+                  font-size: 10px;
+                  color: rgb(173, 173, 173);
+                  img{
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 7px;
+                    margin-right: 3spx;
+                  }
+                }
+              }
+            }
+        }
+      }
+        .right{
+          hr{
+            margin: 5px;
+          }
+          padding: 10px;
+          width: 25%;
+          font-size: 14px;
+          ul{
+            margin: 0;
+            padding: 0;
+            li{
+              font-size: 14px;
+              list-style: none;
+              height: 20px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;  
+            /* 把多出来的文字设置为... */
+            .type{
+              max-width: 40px;
+              color: gray;
+              margin-right: -10px;
+            }
+            .name{
+              margin-left: 40px;
+              color: gray;
+            }
+          }
+          a:hover {
+            color: red;
+          } 
+        }
+      }
+    }
+    .lb2{
+      width: 1020px;
+      height: 220px;
+      margin: 20px auto;
+      background-color: aqua;
+      display: flex;
+        #xyg{
+          width: 170px;
+          height: 220px;
+          background-color: red;
+        }
+        #lb2{
+          height: 220px;
+          width: 850px;
+          padding: 0;
+          background-color: white;
+          position: relative;
+          overflow: hidden;
+          .lbu2{
+            display: flex;
+            ul{
+              list-style: none;
+              display: flex;
+              margin: 0;
+              padding: 0;
+              li{
+                width: 151px;
+                text-align: center;
+                white-space:nowrap;
+                overflow: hidden;
+                font-size: 16px;
+                padding: 10px 4px;
+                padding: 20px 4px;
+                margin: 0 5px;
+                line-height: 25px;
+
+                  span{
+                    font-size: 12px;
+                  }
+                  
+              }
+            }
+          }
+          #zuo, #you{
+            width: 60px;
+            height: 40px;
+            background-color: rgba(120, 120, 120, 0.2);
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 20px;
+            position: absolute;
+
+            span{
+              font-size: 18px;
+              color: white;
+            }
+            
+          }
+          
+          .left{
+            top: 40%;
+            left: -30px;
+          }
+          .right{
+            top: 40%;
+            right: -30px;
+          }
+          #zuo:hover, #you:hover{
+            background-color: rgba(113, 113, 113, 0.3);
+          }
+        }
+    }
+    .bangdans{
+      width: 1000px;
+      height: 800px;
+      background-color: white;
+      margin: 20px auto;
+      padding-right: 20px;
+      display: flex;
+        .bangdan{
+          width: 25%;
+          padding-left: 20px;
+          .name{
+            /* background-color: pink; */
+            margin: 20px 0 10px 0;
+            font-size: 20px;
+            font-weight: 800;
+            hr{
+              margin: 11px 0;
+            }
+          }
+          hr{
+            margin: 5px 0;
+          }
+          ul{
+            list-style: none;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            li{
+                /* background-color: aquamarine; */
+                border-top: 1px solid gray;
+                display: flex;
+                height: 31px;
+                line-height: 30px;
+                
+                .left{
+                  position: relative;
+                  width: 60%;
+                  height: 100px;
+                  /* background-color: cadetblue; */
+
+                    span{
+                      height: 19px;
+                      width: 35px;
+                      background-color: rgb(244, 20, 122);
+                      color: white;
+                      font-weight: 600;
+                      position: absolute;
+                      top: 0;
+                      font-size: 13px;
+                      line-height: 19px;
+                    }
+                    
+                    .bookname{
+                      height: 20px;
+                      /* background-color: coral; */
+                      margin: -7px 0 0 0;
+                      font-size: 16px;
+                    }
+                    .piao{
+                      display: flex;
+                      .num{
+                        font-size: 18px;
+                        color: rgb(245, 87, 157);
+                      }
+                      .num_name{
+                        font-size: 12px;
+                        /* color: rgb(245, 87, 157); */
+                        margin-left: 5px;
+                      }
+                    }
+                    .type{
+                      font-size: 12px;
+                      color: rgb(205, 205, 205);
+                      margin-top: -5px;
+                      a{
+                        font-size: 12px;
+                        color: rgb(205, 205, 205);
+                      }
+                    }
+                }
+                .right{
+                  /* transform: rotate3d(0, 1, 0, 40deg); */
+                  img{
+                    width: 70px;
+                  }
+
+                }
+              }
+              li:first-of-type{
+                height: 100px;
+                border: none;
+              }
+              span{
+                width: 15px;
+                height: 15px;
+                background-color: rgb(237, 237, 237);
+                padding: 0 3px;
+                font-size: 13px;
+                font-weight: 400;
+                margin-right: 13px;
+              }
+              li:nth-child(2) span{
+                background-color: rgb(71, 187, 255);
+              }
+              li:nth-child(3) span{
+                background-color: rgb(80, 238, 156);
+              }
+            }
+        }
+    }
+    #xinshu, #rqwb{
+      width: 1020px;
+      height: 475px;
+      padding: 10px 0 25px 0;
+      margin: 20px auto;
+      border: 2px;
+      box-sizing: border-box;
+      background-color: white;
+      display: flex;
+      b{
+        font-size: 20px;
+      }
+      a{
+        color: black;
+      }
+      #newbooks_tj{
+        padding: 10px 10px 10px 20px;
+        width: 78%;
+        overflow: hidden;
+        position: relative;
+          hr{
+            margin-bottom: 0px;
+          }
+        #tj_left{
+          width: 230px;
+          height: 100%;
+          margin-right: 20px;
+          background-color: pink;
+          /* margin-right: 20px; */
+          float: left;
+        }
+        #tj_right{
+          .line{
+            width: 480px;
+            height: 1px;
+            background-color: rgb(220, 220, 220);
+            position: absolute;
+          }
+          #line1{
+            top: 187px;
+            left: 267px;
+          }
+          #line2{
+            top: 323px;
+            left: 267px;
+          }
+            ul{
+              margin: 0;
+              padding: 0;
+              li{
+                list-style: none;
+                width: 33.3%;
+                padding: 18px 0;
+                float: left;
+                margin: 0px -2px;
+                position: relative;
+                    .book{
+                      .bookimg{
+                        width: 72px;
+                        height: 103px;
+                        margin-right: 5px;
+                        float: left;
+                      }
+                      .bookname{
+                        width: 150px;
+                        height: 23px;
+                        margin-left: 8px;
+                        flex-wrap: nowrap;
+                        vertical-align: top;
+                        overflow: hidden;
+                        float: left;
+                      }
+                      p{
+                        height: 30px;
+                        width: 150px;
+                        font-size: 10px;
+                        overflow: hidden;
+                        margin-left: 8px;
+                        margin-bottom: 20px;
+                        float: left;
+                        /* color: rgb(173, 173, 173); */
+                      }
+                      a:hover{
+                        color: red;
+                      }
+                      div{
+                        font-size: 10px;
+                        color: rgb(173, 173, 173);
+                        img{
+                          width: 14px;
+                          height: 14px;
+                          margin-left: 7px;
+                          margin-right: 3spx;
+                        }
+                      }
+                    }
+              }
+            }
+        }
+      }
+      #newbooks_bd{
+        padding: 10px;
+        width: 24%;
+        font-size: 14px;
+          hr{
+            margin: 5px;
+          }
+          ul{
+            list-style: none;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            li{
+                /* background-color: aquamarine; */
+                border-top: 1px solid gray;
+                display: flex;
+                height: 31px;
+                line-height: 30px;
+                
+                .left{
+                  position: relative;
+                  width: 60%;
+                  height: 100px;
+                  /* background-color: cadetblue; */
+
+                    span{
+                      height: 19px;
+                      width: 35px;
+                      background-color: rgb(244, 20, 122);
+                      color: white;
+                      font-weight: 600;
+                      position: absolute;
+                      top: 0;
+                      font-size: 13px;
+                      line-height: 19px;
+                    }
+                    
+                    .bookname{
+                      height: 20px;
+                      /* background-color: coral; */
+                      margin: -7px 0 0 0;
+                      font-size: 16px;
+                    }
+                    .piao{
+                      display: flex;
+                      .num{
+                        font-size: 18px;
+                        color: rgb(245, 87, 157);
+                      }
+                      .num_name{
+                        font-size: 12px;
+                        /* color: rgb(245, 87, 157); */
+                        margin-left: 5px;
+                      }
+                    }
+                    .type{
+                      font-size: 12px;
+                      color: rgb(205, 205, 205);
+                      margin-top: -5px;
+                      a{
+                        font-size: 12px;
+                        color: rgb(205, 205, 205);
+                      }
+                    }
+                }
+                .right{
+                  /* transform: rotate3d(0, 1, 0, 40deg); */
+                  img{
+                    width: 70px;
+                  }
+
+                }
+              }
+              li:first-of-type{
+                height: 100px;
+                border: none;
+              }
+              span{
+                width: 15px;
+                height: 15px;
+                background-color: rgb(237, 237, 237);
+                padding: 0 3px;
+                font-size: 13px;
+                font-weight: 400;
+                margin-right: 13px;
+              }
+              li:nth-child(2) span{
+                background-color: rgb(71, 187, 255);
+              }
+              li:nth-child(3) span{
+                background-color: rgb(80, 238, 156);
+              }
+            }
+          /* ul{ 
+            margin: 0;
+            padding: 0;
+            li{
+              list-style: none;
+              font-size: 14px;
+              height: 20px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;  
+                .type{
+                  max-width: 40px;
+                  color: gray;
+                  margin-right: -10px;
+                }
+                .name{
+                  margin-left: 40px;
+                  color: gray;
+                }
+                a:hover{
+                  color: red;
+                }
+            }
+            
+          } */
+      }
+      
+    }
+    a:hover{
+      color: red;
+    }
+    </style>
+</head>
+<body>
+  <div class="dd">
+    <div id="dd_">
+      <div class="top1">
+        <div class="logo">
+          <a href="/"><img src="image/logo.png" alt=""></a>  
+          <!-- href="/"  表明跳转到此时的页面 -->
+        </div>
+        <div id="input">
+          <input type="text" placeholder="傲气如我">
+          <a href=""><span class="iconfont icon-sousuo"></span></a>
+        </div>
+        <div id="shujia"><a href=""><span class="iconfont icon-shu"></span>我的书架</a></div>
+        <div id="news"><a href=""><span class="iconfont icon-duanxin"></span></a></div>
+        <div id="Personal"><a href=""><img src="	https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/account.1e031.png" alt=""></a></div>
+      </div>
+      <hr>
+      <div class="top2">
+        <div class="type_list">
+          <ul>
+            <!-- <li><a href=""></a></li> -->
+            <li><a href=""><span class="iconfont icon-fenlei"></span>全部分类</a></li>
+            <li><a href="">排行榜</a></li>
+            <li><a href="">免费</a></li>
+            <li><a href="">完本</a></li>
+            <li><a href="">古言</a></li>
+            <li><a href="">现言</a></li>
+            <li><a href="">玄幻仙侠</a></li>
+            <li><a href="">悬疑科幻</a></li>
+            <li><a href="">青春游戏</a></li>
+            <li><a href="">风尚阁</a></li>
+          </ul>
+        </div>
+        <div class="zuojia">
+          <a href=""><span id="chongzhi" class="iconfont icon-chongzhi"></span>充值</a>
+          <a href=""><span id="zuanshi" class="iconfont icon-zuanshihuiyuan-line"></span> 作家专区</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lb1">
+    <div class="img_div">
+      <div id="lb_imgs">
+      </div>
+      <div id="lb_btns">
+      </div>
+    </div>
+    <div class="ggao">
+      <div id="title">
+        <span class="iconfont icon-laba_"></span>
+        <b>公告</b>
+      </div>
+
+      <hr>
+      <ul id="gg">
+      </ul>
+    </div>
+  </div>
+<!-- 编辑强推 -->
+  <div class="bjqt">
+    <div class="left">
+      <b>编辑强推</b>
+      <hr>
+
+      <div class="line" id="line1"></div>
+      <div class="line" id="line2"></div>
+
+      <ul id="bjqt">
+                <!-- <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <hr>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <hr>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="book">
+            <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+            <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+            <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+              才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+              您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+              严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+              的慈善家?！本该是疯批小少爷的歌手三哥，成
+            </p>
+    
+            <div>
+              <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+              云非愿
+              现代言情  
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="right">
+     <a href=""><b>风尚阁</b></a>
+     <hr>
+     <div>
+      <ul id="fsg">
+        <!-- <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li>
+        <hr>
+        <li>
+          <a class="type" href="" target="_blank">[科幻空间]</a>
+          <a class="name" href="" target="_blank" title="荒野直播：真公主她飒爆星际">荒野直播：真公主她飒爆星际</a>
+        </li> -->
+      </ul>
+     </div>
+    </div>
+  </div>
+
+  <div class="lb2">
+    <div id="xyg"><img src="" alt=""></div>
+    <div id="lb2">
+      <div class="lbu2">
+        <ul id="lb_ul2">
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+          <li>
+            <a href="">
+              <img src="https://bookcover.yuewen.com/qdbimg/349573/c_22944735509265504/90" alt="全星际都是我的手下败将">
+            </a>
+            <br>
+            <a href="">全星际都是我的手下败将</a>
+            <br>
+            <span>温迟迟</span>
+          </li>
+        </ul>
+      </div>
+      <div id="zuo" class="left"><span class="iconfont icon-fangxiang-you"></span> <em></em><span class="iconfont icon-fangxiang-zuo"></span></div>
+      <div id="you" class="right"><span class="iconfont icon-fangxiang-you"></span> <em></em><span class="iconfont icon-fangxiang-zuo"></span></div>
+    </div>
+  </div>
+
+  <div class="bangdans">
+    <div class="bangdan">
+      <div class="name">华语言情风云榜 <hr></div>
+      <ul id="name1">
+        <li>
+          <div class="left">
+            <span>NO.1</span>
+            <br>
+            <div class="bookname">
+            <a href="">太子入戏之后</a> 
+            </div> 
+            <div class="piao">
+              <div class="num">244</div>
+              <div class="num_name">月票</div>
+            </div>
+              <div class="type"><a href="">古代言情</a> 暗香</div>
+          </div>
+          <div class="right"><img src="https://bookcover.yuewen.com/qdbimg/349573/c_21292531108289404/90" alt="太子入戏之后"></div>
+        </li>
+
+        <li>
+          <div><span>2</span></div>
+          <div id="name"><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>3</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>4</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>5</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>6</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>7</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>8</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>9</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="bangdan">
+      <ul id="name1">
+        <div class="name">热销榜<hr></div>
+        
+      </ul>
+    </div>
+    <div class="bangdan">
+      <ul id="name1">
+        <div class="name">礼物榜<hr></div>
+      </ul>
+    </div>
+    <div class="bangdan">
+      <ul id="name1">
+        <div class="name">更新榜 <hr></div>
+      </ul>
+    </div>
+  </div>
+  <!-- 新书推荐 -->
+  <div id="xinshu">  
+
+    <div id="newbooks_tj">
+      <b>新书推荐</b>
+      <hr>
+
+      
+      <div id="tj_left">
+      </div>
+      
+      <div id="tj_right">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <ul id="tj_books">
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="newbooks_bd">
+     <a href=""><b>签约作者新书榜</b></a>
+     <hr>
+     <div>
+      <ul id="bd">
+        <li>
+          <div class="left">
+            <span>NO.1</span>
+            <br>
+            <div class="bookname">
+            <a href="">太子入戏之后</a> 
+            </div> 
+            <div class="piao">
+              <div class="num">244</div>
+              <div class="num_name">月票</div>
+            </div>
+              <div class="type"><a href="">古代言情</a> 暗香</div>
+          </div>
+          <div class="right"><img src="https://bookcover.yuewen.com/qdbimg/349573/c_21292531108289404/90" alt="太子入戏之后"></div>
+        </li>
+
+        <li>
+          <div><span>2</span></div>
+          <div id="name"><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>3</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>4</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>5</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>6</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>7</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>8</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>9</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+      </ul>
+     </div>
+    </div>
+
+  </div>
+  <div id="rqwb">  
+
+    <div id="newbooks_tj">
+      <b>人气完本</b>
+      <hr>
+
+      <div id="tj_left">
+      </div>
+      
+      <div id="tj_right">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <ul id="tj_books">
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book">
+              <a href=""><img class="bookimg" src="https://bookcover.yuewen.com/qdbimg/349573/c_24136440301621704/90" alt="反派家的真千金一心向善"></a>
+              <a href="" class="bookname" title="反派家的真千金一心向善">反派家的真千金一心向善</a>
+              <p>【1v1+青梅竹马+甜宠+架空】＃魔界公主犯上作乱，被打入凡间，要求做满九十九件好事，
+                才能重返魔界＃轮回了三次的温酒：……原来真的要做好事！系统：宿主，该第四次转世了，
+                您要做九百九十九件好事，才能回去。温酒看着这一世的反派家族，陷入沉思。本该是刻板
+                严肃的精明大哥，成了恋爱脑霸总，一心追妻?！本该是风流桀骜的导演二哥，成了一心向善
+                的慈善家?！本该是疯批小少爷的歌手三哥，成
+              </p>
+      
+              <div>
+                <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">
+                云非愿
+                现代言情  
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="newbooks_bd">
+     <a href=""><b>完本榜</b></a>
+     <hr>
+     <div>
+      <ul id="bd">
+        <li>
+          <div class="left">
+            <span>NO.1</span>
+            <br>
+            <div class="bookname">
+            <a href="">太子入戏之后</a> 
+            </div> 
+            <div class="piao">
+              <div class="num">244</div>
+              <div class="num_name">月票</div>
+            </div>
+              <div class="type"><a href="">古代言情</a> 暗香</div>
+          </div>
+          <div class="right"><img src="https://bookcover.yuewen.com/qdbimg/349573/c_21292531108289404/90" alt="太子入戏之后"></div>
+        </li>
+
+        <li>
+          <div><span>2</span></div>
+          <div id="name"><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>3</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>4</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>5</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>6</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>7</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>8</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+
+        <li>  
+          <div><span>9</span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+        <li>  
+          <div><span></span></div>
+          <div><a href="">穿成权臣的首富娇妻</a></div>
+        </li>
+      </ul>
+     </div>
+    </div>
+
+  </div>
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+<script>  // 请求轮播图数据、轮播图代码、公告区数据
+  // <button id="lb_btn_1" class="lb_btn_class"><a href="https://www.readnovel.com/book/21962364801490404" target="_black">农家小福妻有法术</a></button>
+  /**
+   * 轮播图js代码 
+   */
+  axios({
+    method: 'GET',
+    url: 'http://book.zyhb.ink/webApi/Index/lbt',
+  }).then(function(re) {
+    if(parseInt(re.data.code) == 200){
+      var html_1 = ''
+      var html_2 = ''
+      var array = re.data.data
+
+      for (var i = 0; i < array.length; i++) {
+        html_1 += '<img id="lb_' + i + '" style="visibility:hidden" src="' + array[i].imgurl + '" alt="">';
+        html_2 += '<button id="lb_btn_' + i + '" class="lb_btn_class">' + '<a href="" target="_black">' + array[i].title + '</a></button>';
+      }
+
+      document.getElementById("lb_imgs").innerHTML = html_1
+      document.getElementById("lb_btns").innerHTML = html_2
+      } else {
+      console.log(re.msg);
+    }
+
+    //用来标记最新的轮播图下标
+    now_lb_index = -1;
+    function lb1(){
+      //给最新的下标加一（将显示的图片换成下一幅）
+      if((now_lb_index+1)<array.length){
+        now_lb_index++;
+      }
+      else{
+        //下标已经到最后一个了再走就超了，就默认下标重置为0从第一幅图开始
+        now_lb_index=0;
+      }
+      
+      for(let i=0;i<array.length;i++){
+        if(i==now_lb_index){
+          //当lb_i为lb_now_lb_index时图片显示，否则图片隐藏
+          document.getElementById("lb_"+i).style.visibility = "visible";
+          document.getElementById("lb_btn_" + i).classList.add('lb_bt_bgc')
+        }
+        else{
+          document.getElementById("lb_"+i).style.visibility = "hidden";
+          document.getElementById("lb_btn_" + i).classList.remove('lb_bt_bgc')
+        }
+      }
+    }
+    lb1();
+    var lb_id = setInterval(lb1,2000);
+
+    // function lbt_imgs() {
+    //   for (var i = 0; i < re.data.data.length; i++) {
+    //     return document.getElementById("lb_" + i)
+    //   }
+    // }
+
+    /***
+     * 
+     * 0|1 2 3 4 5 6 7 8| 9 
+     * 0 1 | 2 3 4 5 6 7 8 9| 0
+     * 0 1 2 |34567890|1
+     * 0123|45678901|2
+     * 
+     */
+
+    // var lb_id = setInterval(lbt_imgs,2000)        // 获取setInterval的返回值：ID
+    var lbv = document.getElementsByClassName('lb_btn_class')        // 获取button数组
+    for(var i = 0; i < lbv.length ; i++){         // button数组进行循环
+      lbv[i].onmouseover = function(){            // 鼠标移入时的函数
+          //销毁轮询事件
+          clearInterval(lb_id)  // 把获取到的setInterval的返回值销毁
+
+          index = this.id.split('_').pop()            // 获取button ID里的下标
+          
+          now_lb_index = index;
+          for (var j = 0; j < lbv.length; j++){
+            if(j==index){
+              //当lb_i为lb_now_lb_index时图片显示，否则图片隐藏
+              document.getElementById("lb_"+j).style.visibility = "visible";
+              document.getElementById("lb_btn_" + j).classList.add('lb_bt_bgc')
+            }
+            else{
+              document.getElementById("lb_"+j).style.visibility = "hidden";
+              document.getElementById("lb_btn_" + j).classList.remove('lb_bt_bgc')
+            }
+          }
+          //变更图片
+          // return array[i].imgurl
+      }
+      // 鼠标被移除时，重新实现定时调用
+      lbv[i].onmouseout = function(){
+        lb_id = setInterval(lb1,2000)
+      }
+    }
+  })
+
+
+
+  /*
+  *
+  *公告JS代码
+  */
+
+ axios({
+  method: 'GET',
+    url: 'http://book.zyhb.ink/webApi/Index/gg',
+    data: {page: 1, limit: 3}
+  }).then(function(re) {
+    console.log(re)
+    if (parseInt(re.data.code) == 200) {
+      var html = ''
+      var array = re.data.data.rows
+      
+      for (var i = 0; i < array.length; i++) {
+        if (i < 1) {
+          html += '<li>' +
+                  '<a  style="color: red; font-weight:600; font-size: 14px" href="' + array[i].url + '" target="_blank">' + '[公告] ' + array[i].title +'</a>' +
+                  '</li>'
+        } else {
+          html += '<hr>' +
+                  '<li>' +
+                  '<a href="' + array[i].url + '" target="_blank">' + '[公告] ' + array[i].title +'</a>' +
+                  '</li>'
+        }
+      }
+      document.getElementById("gg").innerHTML = html
+    } else {
+      console.log(re.msg);
+    }
+  })
+ 
+</script>
+<script type="application/javascript" >  // 请求编辑强推部分数据
+  axios({
+    method: 'GET',
+    url: 'http://book.zyhb.ink/webApi/Index/bjqt',
+  }).then(function(re) {  // 拦截器
+    // console.log(re)
+    if(parseInt(re.data.code) == 200){
+      let html = '';
+      var array = re.data.data
+      for (let index = 0; index < array.length; index++) {
+        html += '    <li>' +
+              '      <div class="book">' +
+              '        <a href=""><img class="bookimg" src="'+array[index].img+'" alt="'+array[index].title+'"></a>' +
+              '        <a href="" class="bookname" title="'+array[index].title+'">'+array[index].title+'</a>' +
+              '        <p>'+array[index].jj+'</p>' +
+              '        <div>' +
+              '          <img src="https://yuxseocdn.yuewen.com/pro/readnovel_pc/_prelease/images/ico/user.f22d3.png" alt="">' +
+              '          '+array[index].zz
+              '          '+array[index].bq
+              '        </div>' +
+              '      </div>' +
+              '    </li>';
+      
+              document.getElementById("bjqt").innerHTML = html
+            }
+    } else {
+      console.log(re.msg);
+    }
+  })
+
+    
+  axios({
+    method: 'GET',
+    url: 'http://book.zyhb.ink/webApi/Index/fsg',
+    data: {page: 1, limit: 3}
+  }).then(function(re) {
+    // console.log(re)
+      if(parseInt(re.data.code) == 200){
+        let html = '';
+        var array = re.data.data.rows
+        for (let index = 0; index < array.length; index++) {
+          if (index < 1) {
+            html +=
+                    '    <li>' +
+                    '      <a class="type" href="" target="_blank">' + '[' + array[index].bq + ']' + '</a>' +
+                    '       <a class="name" href="" target="_blank" title="' + array[index].title + '">' + array[index].title + '</a>' +
+                    '    </li>';
+          } else {
+            html +=
+                    '    <hr>' +
+                    '    <li>' +
+                    '      <a class="type" href="" target="_blank">' + '[' + array[index].bq + ']' + '</a>' +
+                    '       <a class="name" href="" target="_blank" title="' + array[index].title + '">' + array[index].title + '</a>' +
+                    '    </li>';
+          }
+        }
+        document.getElementById("fsg").innerHTML = html
+      } else {
+        console.log(re.msg);
+      }
+  })
+
+
+  var json = [
+      {
+        "title": "她软在我心上", //轮播图标题
+        "imgurl": "https://bossaudioandcomic-1252317822.image.myqclou…ity/document/f5fd1d9ab6886d6745e38e938bf7e01d.jpg", //轮播图片地址
+        "book_id": 0 //书本id
+      }
+    ] //请求数据
+</script>
+<script>  // 请求小轮播图数据、轮播图代码
+  // function lu2() {
+
+  // }
+  // var left = document.getElementById("zuo")
+  // var right = document.getElementById("you")
+  // left.onclick() 
+  // function onclick () {
+  //   var pre = document.getElementsById('lb_ul2')
+  //   // pre.setAttribute('')
+  //   p.style.left = "160px"
+  // }
+</script>
+<script src="js/less.js"></script>
+  </body>
+</html>

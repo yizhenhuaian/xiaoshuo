@@ -1,0 +1,79 @@
+{
+  "id": "3754163",
+  "name": "xiaoshuo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31392109",
+      "name": "方向-右",
+      "font_class": "fangxiang-you",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
+      "icon_id": "31392111",
+      "name": "方向-左",
+      "font_class": "fangxiang-zuo",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "1929808",
+      "name": "喇叭_1",
+      "font_class": "laba_",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "68235",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "657478",
+      "name": "短信",
+      "font_class": "duanxin",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "1727425",
+      "name": "206搜索",
+      "font_class": "sousuo",
+      "unicode": "e8ba",
+      "unicode_decimal": 59578
+    },
+    {
+      "icon_id": "5360120",
+      "name": "充值",
+      "font_class": "chongzhi",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "15628593",
+      "name": "钻石会员-line",
+      "font_class": "zuanshihuiyuan-line",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    },
+    {
+      "icon_id": "5026",
+      "name": "图书",
+      "font_class": "tushu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2571142",
+      "name": "书",
+      "font_class": "shu",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}
